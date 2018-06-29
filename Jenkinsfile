@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         build 'Build_job'
+      }
+    }
+    stage('Email') {
+      steps {
+        echo 'Build Successfull'
       }
     }
   }
